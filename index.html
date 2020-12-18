@@ -147,7 +147,7 @@
 							up to 50 square meters of concrete cement floors of a value of about 1,500 Mexican pesos, which was aproximately
 							150 dollars. On the map below, one can see that dirt floors are numerous in the twin cities of Gómez Palacios and Torreón
 							(which will be the regions of interest for the study). Some clusters of household have more than 75% of dirt floors.
-							In total, 10% of the households in the observed region live with floors made of dirt.</p>
+							</p>
 
 							<!-- Dirtfloors map -->
 							<div class="row">
@@ -158,18 +158,24 @@
 								</div>
 							</div>
 
-							<header class="major">
-								<h2>Housing, Health, and Happiness" by Cataneo, M. et. al. (2009)</h2>
-							</header>
-
 							<!-- Dirtfloors pie -->
 							<div class="row">
-								<div class="col-12 col-12-narrower">
+								<div class="col-8 col-12-narrower">
 									<section>
 											<iframe src="figures/dirtfloor_pie.html" width="100%" height="400"></iframe>
 									</section>
 								</div>
+								<div class="col-4 col-12-narrower">
+									<section>
+											<p style="text-align: justify;"><br><br><br>In total, 10% of the households in the
+												observed region live with floors made of dirt.</p>
+									</section>
+								</div>
 							</div>
+							
+							<header class="major">
+								<h2>Housing, Health, and Happiness" by Cataneo, M. et. al. (2009)</h2>
+							</header>
 
 							<p style="text-align: justify;">In the paper "Housing, Health, and Happiness" by Cataneo, M. 
 								et. al. (2009),  the health impacts of the Piso Firme program are analyzed and assessed.  
@@ -180,7 +186,22 @@
 								depression and stress scales in the adults were used to perform several regression analyses 
 								to determine whether or not the program has a significant impact in such factors.</p>
 
-							<p style="text-align: justify;">
+							<p style="text-align: justify;">Below you can see the repartition of data samples between the states
+							of Durango and Coahuila. Coahuila was the first state to received Piso Firme, when the data was collected,
+							households from Torreón (in the state of Durango) did not benefit yet from Piso Firme. In their paper,
+							Cataneo, M. et. al. could measure the benefits of Piso Firme in Gómez Palacios by comparing the
+							mental and physical health indicators with the ones they observed in Torreón</p>
+
+							<!-- groups clusters -->
+							<div class="row">
+								<div class="col-12 col-12-narrower">
+									<section>
+											<iframe src="figures/cluster_map.html" width="100%" height="600"></iframe>
+									</section>
+								</div>
+							</div>
+
+							<p style="text-align: center;">
 								One of the results from this paper is the observation of significant positive effects on maternal 
 								happiness in households that were proposed Piso Firme, such as a decrease of perceived stress and depression, and an increase 
 								in house satisfaction and quality of life.
@@ -197,7 +218,13 @@
 
 							<!-- Poverty pie -->
 							<div class="row">
-								<div class="col-12 col-12-narrower">
+								<div class="col-4 col-12-narrower">
+									<section>
+											<p style="text-align: center;"><br><br><br>In the considered region, almost 10%
+												of households live below the poverty line.</p>
+									</section>
+								</div>
+								<div class="col-8 col-12-narrower">
 									<section>
 											<iframe src="figures/poverty_pie.html" width="100%" height="400"></iframe>
 									</section>
@@ -229,61 +256,98 @@
 									</ul>
 								</p>								
 
-							<p style="text-align: justify;">We consider now the households that were not proposed the Piso Firme program and we define two groups: those who installed cement floors and those who didn't. But before going further, let's check the mean income of the two groups. The chart is abailable below.</p>
-
-							<!-- Mean income before matching -->
-							<div class="row">
-								<div class="col-12 col-12-narrower">
-									<section>
-											<iframe src="figures/income_before_matching.html" width="100%" height="500"></iframe>
-									</section>
-								</div>
-							</div>
-							
-							<p style="text-align: justify;">It looks like people who installed cement floors in their households have higher incomes (which is expected). This is bad news, it could bias the results. To solve this problem, the considered households will be balanced using a matching algorithm on the income per capita of households.
-							This way, samples with similar incomes will be considered ! Below you can find the mean income per capita in the two groups after matching.</p>
-
-
-							<!-- Mean income after matching -->
-							<div class="row">
-								<div class="col-12 col-12-narrower">
-									<section>
-											<iframe src="figures/income_after_matching.html" width="100%" height="500"></iframe>
-									</section>
-								</div>
-							</div>
-
-							<p style="text-align: justify;">Groups are balanced now. We can perform the regression analysis. Let's look how the installation of cement floors impact the happiness/satisfaction variables !</p>
+							<p style="text-align: justify;">We consider now the households that were not proposed the Piso
+								Firme program and we define two groups: those who installed cement floors and those who didn't.
+								But before going further, let's check the mean income of the two groups. A matching algorithm
+								was used to balance the incomes per capita of the households from the two groups.
+								Now we perform a linear regression to observe how the installation of cement floors impact
+								the happiness and satisfaction of households caretakers. Control variables
+								(demographic, heatlh, social and benefits from other social programs) are added to the model
+								to mitigate their effects on the mental health indicators. The results are available below.</p>
 
 							<!-- RQ 1 results -->
 							<div class="row">
 								<div class="col-12 col-12-narrower">
 									<section>
-											<iframe src="" width="100%" height="600"></iframe>
+											<iframe src="figures/rq1_results_effect_bar.html" width="100%" height="600"></iframe>
 									</section>
 								</div>
 							</div>
 
-							<p style="text-align: justify;">The figure above shows that the installation of cement floor does improve floor 
+							<p style="text-align: justify;">The first thing to notice is the lack of significance of most of
+								the results (in grey in the figure above). The figure above shows that the installation of cement floor does improve floor 
 								satisfaction of about 11% (with a 10% significance level), but there is no strong evidence saying it 
-								increases the house and life satisfaction significantly in other variables. More research would 
-								need to be done on this side. Also the stress level doesn't seem to get lower, maybe because 
-								households need to spend a part of their revenue for it, creating potential economic concerns in 
+								increases the house and life satisfaction significantly in other variables. It seems like we can not 
+								answer more accurately to this question with the used data set. Also the stress level doesn't seem to
+								get lower, maybe because households need to spend a part of their revenue for it, creating potential
+								economic concerns in 
 								those households. To increase happiness, advising households to invest in cement floors is not 
 								sufficient, governmental programs such as Piso Firme seem to be necessary for the well-being of 
 								these households.</p>
 
 							<p style="text-align: justify;">But the budget of such programmes are limited. Therefore in the next research question,
 							we will search how to make the program more cost-efficient. One way to make Piso Firme less costly is to install less
-							cement. Terefore, we will try to install less cement in households, but in a more efficient way ! This is how we proceed :
-							we consider 4 rooms the kitchen, the dinning room, the bathrooms, and bedrooms. The used data set indicates in what rooms
+							cement. Terefore, we will try to propose less cement in households, but in a more efficient way !</p><!--This is how we proceed :
+							we consider 4 rooms : the kitchen, the dinning room, the bathrooms, and bedrooms. The used data set indicates in what rooms
 							cement floors were installed. Therefore, another regression analysis on the satisfaction indicators can help us to
 							understand what are the most important rooms where cement floors should be installed. This way, Piso Firme (or a similar
-							program) can be optimized to allow a greater number of people to benefit from it !</p>
+							program) can be optimized to allow a greater number of people to benefit from it !</p>--> 
 
 							<header class="major">
-								<h2>What housing improvements have the greatest effect on the mental health and well-being of the house caretaker? </h2>
+								<h2>What housing improvements have the greatest effect on the mental health and well-being of the house caretaker ?</h2>
 							</header>
+
+							<p style="text-align: left;">
+								To answer to this question, we are going to measure the effect of installation of cement floors on mental
+								health in 4 different rooms :
+							</p>
+
+								<ul style="text-align: left;">
+									<li>The bedroom</li>
+									<li>The kitchen</li>
+									<li>The dining room</li>
+									<li>The bathroom</li>
+								</ul>
+								
+								<p style="text-align: left;">
+								The considered mental health indicators will be the same as the ones previously cited.
+								In order to assess the different impacts that each room has when getting a
+								cement floor, a regression analysis is going to be performed. Our control group will be those
+								households in which no cement floor has been installed.
+								</p>
+								
+								<p style="text-align: left;">
+								The objective of this regression is to determine in what rooms cement floors have the greatest
+								benefits on the
+								happiness indicators. This way installing cement floors in these rooms can be prioritized,
+								and save money so that the government can reach more percentage of the population. Also,
+								a correction in each model is again performed to make sure the effects of other control variables
+								(demographic, heatlh, social and benefits from other social programs) do not change the results.
+								</p>
+
+								<!-- RQ 1 results -->
+								<div class="row">
+									<div class="col-12 col-12-narrower">
+										<section>
+												<iframe src="figures/rq2_results_effect_bar.html" width="100%" height="600"></iframe>
+										</section>
+									</div>
+								</div>
+
+								<p style="text-align: left;">
+								The figure above shows the effect that these 4 different rooms have on happiness indicators 
+								when cement floors are installed. All the results (with exception of Cement floors in bathrooms 
+								for perceived stress), are strongly significant at 1%. Even if all rooms have a positive influence 
+								on the happiness indicators, these can be prioritized in order to reduce the overall costs of the 
+								program, so more people can be reached by it, while optimizing the overall happiness indicators. 
+								</p>
+
+								<p style="text-align: left;">
+								The room that has the top priority is the Dining room, since it is, by almost all the indicators 
+								(with exception of the Perceived Stress), the one with better performance, followed by the 
+								kitchen and the bedroom. 
+								</p>
+							
 
 							<header class="major">
 								<h2>What we learned</h2>
@@ -345,24 +409,18 @@
 
 				</article>
 
-			<!-- CTA
+			<!-- CTA-->
 				<section id="cta">
-
-					<header>
-						<h2>Ready to do <strong>something</strong>?</h2>
-						<p>Proin a ullamcorper elit, et sagittis turpis integer ut fermentum.</p>
-					</header>
-					<footer>
-						<ul class="buttons">
-							<li><a href="#" class="button primary">Take My Money</a></li>
-							<li><a href="#" class="button">LOL Wut</a></li>
-						</ul>
+					<footer id="footer">
+					<ul class="copyright">
+						<li> <b>Su Jingran, Daniel Gutierrez Navaro, Victor Taburet - 2020</b></li>
+						<li><b>Template: <a href="https://html5up.net/twenty">Twenty by HTML5 UP</a></b></li>
+					</ul>
 					</footer>
-
 				</section>
-			 -->
+			 
 
-			<!-- Footer
+			<!-- Footer 
 				<footer id="footer">
 
 					<ul class="icons">
@@ -374,11 +432,12 @@
 					</ul>
 
 					<ul class="copyright">
-						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li> Su Jingran, Daniel Gutierrez Navaro, Victor Taburet - 2020</li>
+						<li>Template: <a href="https://html5up.net/twenty">Twenty by HTML5 UP</a></li>
 					</ul>
 
-				</footer>
-			 -->
+				</footer>-->
+			
 		</div>
 
 		<!-- Scripts -->
