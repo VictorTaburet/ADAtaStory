@@ -229,7 +229,7 @@
 								</div>
 							</div>
 
-							<p style="text-align: center;">
+							<p style="text-align: justify;">
 								One of the results from this paper is the observation of significant positive effects on maternal 
 								happiness in households that were proposed Piso Firme, such as a decrease of perceived stress and depression, and an increase 
 								in house satisfaction and quality of life.
@@ -263,7 +263,33 @@
 
 							<p style="text-align: justify;">We consider now the households that were not proposed the Piso
 								Firme program and we define two groups: those who installed cement floors and those who didn't.
-								But before going further, let's check the mean income of the two groups. A matching algorithm
+								But before going further, let's check the mean income of the two groups.</p>
+								
+								<!-- Mean income before matching -->
+								<div class="row">
+									<div class="col-12 col-12-narrower">
+										<section>
+												<iframe src="figures/income_before_matching.html" width="100%" height="500"></iframe>
+										</section>
+									</div>
+								</div>
+	
+								<p style="text-align: justify;">It looks like people who installed cement floors in their households have higher incomes (which is expected). This is bad news, it could bias the results. To solve this problem, the considered households will be balanced using a matching algorithm on the income per capita of households.
+								This way, samples with similar incomes will be considered ! Below you can find the mean income per capita in the two groups after matching.</p>
+	
+	
+								<!-- Mean income after matching -->
+								<div class="row">
+									<div class="col-12 col-12-narrower">
+										<section>
+												<iframe src="figures/income_after_matching.html" width="100%" height="500"></iframe>
+										</section>
+									</div>
+								</div>
+	
+								<p style="text-align: justify;">Groups are balanced now. We can perform the regression analysis. Let's look how the installation of cement floors impact the happiness/satisfaction variables !</p>
+								
+							<p style="text-align: justify;"> A matching algorithm
 								was used to balance the incomes per capita of the households from the two groups.
 								Now we perform a linear regression to observe how the installation of cement floors impact
 								the happiness and satisfaction of households caretakers. Control variables
